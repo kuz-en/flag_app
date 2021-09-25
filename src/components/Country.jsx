@@ -2,7 +2,7 @@ function Country (props) {
   const {
     name,
     capital,
-    flag,
+    flags: [flag],
     alpha3Code: code,
   } = props;
 

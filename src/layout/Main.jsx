@@ -7,7 +7,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://restcountries.eu/rest/v2/name/united')
+    fetch('https://restcountries.com/v2/name/united')
       .then(response => response.json())
       .then(data => this.setState({countries: data}))
   }
