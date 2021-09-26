@@ -1,17 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-class Search extends React.Component {
-  state = {
-    search: '',
-  }
+const Search = (props) => {
+  const {
+    searchCountries = Function.prototype,
+    } = props;
 
-handleKey = (event) => {
+  const [search, setSearch] = useState('');
+
+const handleKey = (event) => {
   if (event.key === "Enter") {
-    this.props.searchCountries(this.state.search);
+    searchCountries(search);
   }
 }
 
-  render() {
+
     return <div className="row">
 
       <div className="input-field">
@@ -19,16 +21,16 @@ handleKey = (event) => {
         placeholder='Поиск'
         class="validate"
         type="search"
-        value={this.state.search}
-        onChange={(e) => this.setState({search: e.target.value})}
-        onKeyDown={this.handleKey}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        onKeyDown={handleKey}
         />
-        <button className="btn search-btn cyan lighten-2" onClick={() => this.props.searchCountries(this.state.search)}>Найти</button>
+        <button className="btn search-btn cyan lighten-2" onClick={() => searchCountries(search)}>Найти</button>
       </div>
 
   </div>
 
-  }
+
 }
 
 export {Search}
