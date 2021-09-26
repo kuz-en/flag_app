@@ -1,20 +1,24 @@
-function Country (props) {
-  const {
-    name,
-    capital,
-    flags: [flag],
-    alpha3Code: code,
-  } = props;
+function Country(props) {
+    const {
+        name,
+        capital,
+        flags: [flag],
+        alpha3Code: code,
+    } = props;
 
-  return <div id={code} className="card country">
-    <div className="card-image waves-effect waves-block waves-light">
-      <img className="activator" alt={`${name} flag`} src={flag} />
-    </div>
-    <div className="card-content">
-      <span className="card-title activator grey-text text-darken-4">{name}</span>
-      <p>{capital}</p>
-    </div>
-  </div>
+    return (
+        <div id={code} className='card country'>
+            <div className='card-image waves-effect waves-block waves-light'>
+                <img className='activator' alt={`${name} flag`} src={flag} />
+            </div>
+            <div className='card-content'>
+                <span className='card-title activator grey-text text-darken-4'>
+                    {name}
+                </span>
+                <p>{capital}</p>
+            </div>
+        </div>
+    );
 }
 
-export {Country}
+export { Country };
