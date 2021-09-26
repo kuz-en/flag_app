@@ -13,9 +13,7 @@ const handleKey = (event) => {
   }
 }
 
-
     return <div className="row">
-
       <div className="input-field">
         <input
         placeholder='Поиск'
