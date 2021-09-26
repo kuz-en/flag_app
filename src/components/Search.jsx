@@ -23,7 +23,7 @@ handleKey = (event) => {
         onChange={(e) => this.setState({search: e.target.value})}
         onKeyDown={this.handleKey}
         />
-        <button className="btn search-btn" onClick={() => this.props.searchCountries(this.state.search)}>Найти</button>
+        <button className="btn search-btn cyan lighten-2" onClick={() => this.props.searchCountries(this.state.search)}>Найти</button>
       </div>
 
   </div>
