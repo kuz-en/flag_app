@@ -1,12 +1,14 @@
 import  {Country} from './Country'
 
 function Countries (props) {
-  const {countries} = props;
+  const {countries = [] } = props;
 
   return <div className="countries">
-    {countries.map(country => (
-      <Country key={country.alpha3Code} {...country} />
-    ))}
+    {countries.length ? (
+    countries.map((country )=> <Country key={country.alpha3Code} {...country} />)
+    ) : (
+      <h4>Ничего не найдено</h4>
+    )}
   </div>
 }
 
