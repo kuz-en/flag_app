@@ -1,10 +1,5 @@
 function Country(props) {
-    const {
-        name,
-        capital,
-        flags: [flag],
-        alpha3Code: code,
-    } = props;
+    const { name, capital, flag, alpha3Code: code } = props;
 
     return (
         <div id={code} className='card country'>
